@@ -22,3 +22,11 @@ Before running this project, make sure you have the following installed:
 ```bash
 git clone https://github.com/Abaan5467/Chat-App/
 ```
+2. Navigate into the project directory:
+```bash
+cd <project-directory>
+```
+3. Install the required dependencies:
+```bash
+npm install
+``

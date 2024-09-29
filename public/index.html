@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #messages {
+      list-style-type: none;
+      padding: 0;
+    }
+    #messages li {
+      padding: 8px;
+      margin-bottom: 5px;
+      background: #f1f1f1;
+      border-radius: 5px;
+    }
+    #messageInput {
+      width: 80%;
+      padding: 10px;
+    }
+    #sendButton {
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chat Room</h1>
+  <ul id="messages"></ul>
+  <input id="messageInput" placeholder="Type a message..." autocomplete="off"/>
+  <button id="sendButton">Send</button>
+  <p id="number"></p>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>

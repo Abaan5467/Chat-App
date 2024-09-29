@@ -29,4 +29,4 @@ cd <project-directory>
 3. Install the required dependencies:
 ```bash
 npm install
-``
+```

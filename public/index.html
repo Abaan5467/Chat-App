@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    #messages {
-      list-style-type: none;
-      padding: 0;
-    }
-    #messages li {
-      padding: 8px;
-      margin-bottom: 5px;
-      background: #f1f1f1;
-      border-radius: 5px;
-    }
-    #messageInput {
-      width: 80%;
-      padding: 10px;
-    }
-    #sendButton {
-      padding: 10px 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>Chat Room</h1>
-  <ul id="messages"></ul>
-  <input id="messageInput" placeholder="Type a message..." autocomplete="off"/>
-  <button id="sendButton">Send</button>
-  <p id="number"></p>
-
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="chat.js"></script>
+    <div class="container">
+        <div class="people">
+            <h1>People In Room:</h1>
+            <ul class="people-list">
+                <li class="person"></li>
+            </ul>
+        </div>
+        <div class="chatarea">
+            <div class="form-container">
+                <h1>Create Your Username:</h1>
+                <form action="" method="post">
+                    <input type="text" name="username" id="username" required>
+                    <p id="error-message"></p>
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+            <div class="display-message">
+                <ul id="messages">
+                </ul>
+            </div>
+            <div class="main-chat">
+                <input type="text" name="message" id="message" disabled required placeholder="Enter Message...">
+                <select name="to" id="to">
+                </select>
+                <button id="sendMessage">Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

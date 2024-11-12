@@ -3,11 +3,10 @@
 This is a simple chat application built using `Express`, `Socket.IO`, and `Node.js`. It allows real-time communication between users through web sockets.
 
 ## Features
-
-- Users can connect to the server.
 - Users can send messages in real-time.
-- Messages are broadcasted to all connected clients.
-- Handles user connection and disconnection events.
+- Users receive desktop notifications when a new message is received and the chat window is not in focus.
+- Users can see the names of the users who are currently online.
+-Users can send private messages to other users.
 
 ## Prerequisites
 
